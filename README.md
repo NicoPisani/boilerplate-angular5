@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Boilerplate Angular 5 de White Canvas
 
 Para poder inicializar el repo, hay que ejecutar el comando
@@ -52,3 +53,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# boilerplate-angular5
+>>>>>>> 198eecdd53e34925e9eb67b9e3b7220d4ffc7a14
