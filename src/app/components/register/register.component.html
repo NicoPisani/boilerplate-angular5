@@ -1,0 +1,46 @@
+<div class="container mt-5">
+    <h1>Register</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <form [formGroup]="registerForm" (submit)="register()">
+  
+          <div class="form-group">
+            Nombre
+            <input
+              type="text"
+              class="form-control"
+              formControlName="nombre"
+              [ngClass]="{'is-invalid': registerForm.controls.nombre.valid == false && registerForm.controls.nombre.touched, 'is-valid': registerForm.controls.nombre.valid && registerForm.controls.nombre.touched}">
+          </div>
+          <div class="form-group">
+            Username
+            <input
+              type="text"
+              class="form-control"
+              formControlName="email"
+              [ngClass]="{'is-invalid': registerForm.controls.email.valid == false && registerForm.controls.email.touched, 'is-valid': registerForm.controls.email.valid && registerForm.controls.email.touched}">
+            <span ng-if="registerForm.controls.email.touched && registerForm.controls.email.errors.duplicate" class="invalid-feedback">Ese email ya está en uso.</span>
+          </div>
+          <div class="form-group">
+            Password
+            <input
+              type="password"
+              class="form-control"
+              formControlName="password"
+              [ngClass]="{'is-invalid': registerForm.controls.password.valid == false && registerForm.controls.password.touched, 'is-valid': registerForm.controls.password.valid && registerForm.controls.password.touched}">
+          </div>
+          <div class="form-group">
+            Password Confirm
+            <input
+              type="password"
+              class="form-control"
+              formControlName="password_confirmation"
+              [ngClass]="{'is-invalid': registerForm.controls.password_confirmation.valid == false && registerForm.controls.password_confirmation.touched, 'is-valid': registerForm.controls.password_confirmation.valid && registerForm.controls.password_confirmation.touched}">
+          </div>
+          <button class="btn btn-outline-success" [disabled]="!registerForm.valid">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,16 @@
+{
+    "short_name": "WhiteCanvas",
+    "name": "WhiteCanvas Angular 5 Boilerplate",
+    "start_url": "/",
+    "theme_color": "#f48c5b",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/assets/images/icons/white-canvas.png",
+            "sizes": "375x375",
+            "type": "image/png"
+        }
+    ]
+}

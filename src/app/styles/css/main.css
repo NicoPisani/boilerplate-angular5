@@ -1,0 +1,394 @@
+/*-------------------------------
+		0.1.-VARIABLES
+--------------------------------*/
+/*COLORS*/
+/*END COLORS*/
+/*FONTS*/
+/*-------------------------------
+		0.-CSS RESET
+--------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/*IMPORTACION DE FONTS*/
+@font-face {
+  font-family: Poppins-Light;
+  src: url(../fonts/poppins-light.ttf); }
+@font-face {
+  font-family: Poppins-regular;
+  src: url(../fonts/poppins-regular.ttf); }
+@font-face {
+  font-family: Poppins-Medium;
+  src: url(../fonts/poppins-medium.ttf); }
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url(../fonts/poppins-semibold.ttf); }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 14.25px;
+  font-family: FontAwesome; }
+
+body, html {
+  line-height: 1;
+  width: 100%;
+  overflow-x: hidden; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+#page-loader {
+  display: none; }
+
+/*----FONTS----*/
+h1 {
+  font-family: Poppins-SemiBold;
+  font-size: 40px;
+  color: #9B9B9B;
+  letter-spacing: -0.35px; }
+
+h2 {
+  font-family: Poppins-Light;
+  font-size: 25px;
+  color: #000; }
+
+h3 {
+  font-family: Poppins-regular;
+  font-size: 18px; }
+
+p {
+  color: #878A8D;
+  letter-spacing: -0.23px;
+  line-height: 20px;
+  font-size: 14px; }
+
+/*---COLORS----*/
+.white {
+  color: #ffffff; }
+
+/*-----******MEDIAQUERIES*****-------*/
+/*-----******MEDIAQUERIES*****-------*/
+/*------MOBILE------*/
+/*-----------------------
+/*----- TABLETS--------*/
+/**
+ * Allows you to use retina images at various pixel densities.
+ * Examples:
+ *
+ *   @include retina(/images/mypic.jpg, 2);
+ *   @include retina(/images/mypic.jpg, 3, 100px 100px, left top no-repeat transparent);
+ *
+ * @param  {Value}  $path               The path to the file name minus extension.
+ * @param  {Number} $cap:    2          The highest pixel density level images exist for.
+ * @param  {Value}  $size:   auto auto  The intended width of the rendered image.
+ * @param  {Value}  $extras: null       Any other `background` values to be added.
+ */
+/*-------------------------------
+		1.-ELEMENTS
+--------------------------------*/
+/*---------BTN---------*/
+.btn, .btn-blue, .btn-green, .btn-border-green, .btn-border-blue {
+  background-color: #18B1A3;
+  color: #ffffff;
+  font-family: Poppins-Medium;
+  font-size: 14px;
+  padding: 10px 26px;
+  border-radius: 3px;
+  letter-spacing: -0.25px; }
+  .btn:hover, .btn-blue:hover, .btn-green:hover, .btn-border-green:hover, .btn-border-blue:hover {
+    transition: all 0.3s;
+    opacity: 0.8; }
+
+.btn-blue {
+  background-color: #4286F5; }
+
+.btn-green {
+  background-color: #18B1A3; }
+
+.btn-border-green {
+  font-family: Poppins-regular;
+  font-size: 13px;
+  border: 1px solid #4286F5; }
+
+.btn-border-blue {
+  font-family: Poppins-regular;
+  font-size: 13px;
+  border: 1px solid #18B1A3; }
+
+.slide-to-top {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.slide-to-top:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #18B1A3;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.slide-to-top:hover, .slide-to-top:focus, .slide-to-top:active {
+  color: #ffffff !important; }
+
+.slide-to-top:hover:before, .slide-to-top:focus:before, .slide-to-top:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1); }
+
+@-webkit-keyframes hvr-icon-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px); }
+  33.3% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px); }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px); }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px); }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px); }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+@keyframes hvr-icon-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px); }
+  33.3% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px); }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px); }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px); }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px); }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+.hvr-icon-wobble-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.hvr-icon-wobble-horizontal:before {
+  content: "\f061";
+  position: absolute;
+  right: 1em;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); }
+
+.hvr-icon-wobble-horizontal:hover:before, .hvr-icon-wobble-horizontal:focus:before, .hvr-icon-wobble-horizontal:active:before {
+  -webkit-animation-name: hvr-icon-wobble-horizontal;
+  animation-name: hvr-icon-wobble-horizontal;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1; }
+
+@-webkit-keyframes go-down {
+  0% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px); }
+  50% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px); }
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px); } }
+@keyframes go-down {
+  0% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px); }
+  50% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px); }
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px); } }
+@-webkit-keyframes go-down-sink {
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px); } }
+@keyframes go-down-sink {
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px); } }
+.go-down {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.go-down:before {
+  content: "\f078";
+  position: absolute;
+  right: 1em;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  background: #ffffff;
+  padding: 21px;
+  font-size: 15px;
+  top: -31px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 9px -5px #888B8D; }
+
+.go-down:hover:before, .go-down:focus:before, .go-down:active:before {
+  -webkit-animation-name: go-down-sink, go-down;
+  animation-name: go-down-sink, go-down;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate; }
+
+.mqn-aav {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 128ms ease-in;
+  border-radius: 50%;
+  border: 2px solid #fff; }
+
+.mqn-module--inview .mqn-aav::before, .mqn-module--inview .mqn-aav::after {
+  background-image: url("../img/right-arrow.svg"); }
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.fadeIn {
+  animation-name: fadeIn; }
+
+/*-------------------------------
+		2.-MODULES
+--------------------------------*/
+/*-------------------------------
+---------- NAVBARS ---------------*/
+/*--------- MAIN NAV ------------- */
+.main-nav {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  box-shadow: 2px 2px 5px #888888; }
+  .main-nav img {
+    margin-left: 5%; }
+  .main-nav .search-div {
+    float: right;
+    margin-right: 10%; }
+  .main-nav ul {
+    float: right;
+    margin-right: 10%; }
+  .main-nav li {
+    display: inline-block; }
+
+/*--------- SIDE NAV ------------- */
+
+/*# sourceMappingURL=main.css.map */
