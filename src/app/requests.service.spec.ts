@@ -1,11 +1,13 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { RequestsService } from './requests.service';
+import { HttpModule } from '@angular/http';
 
 describe('RequestsService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [RequestsService]
+      providers: [RequestsService],
+      imports: [ HttpModule ]
     });
   });
 

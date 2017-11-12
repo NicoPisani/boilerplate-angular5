@@ -8,6 +8,7 @@
             Nombre
             <input
               type="text"
+              id="input-nombre"
               class="form-control"
               formControlName="nombre"
               [ngClass]="{'is-invalid': registerForm.controls.nombre.valid == false && registerForm.controls.nombre.touched, 'is-valid': registerForm.controls.nombre.valid && registerForm.controls.nombre.touched}">
@@ -16,6 +17,7 @@
             Username
             <input
               type="text"
+              id="input-email"
               class="form-control"
               formControlName="email"
               [ngClass]="{'is-invalid': registerForm.controls.email.valid == false && registerForm.controls.email.touched, 'is-valid': registerForm.controls.email.valid && registerForm.controls.email.touched}">
@@ -24,6 +26,7 @@
           <div class="form-group">
             Password
             <input
+              id="input-password1"
               type="password"
               class="form-control"
               formControlName="password"
@@ -32,6 +35,7 @@
           <div class="form-group">
             Password Confirm
             <input
+              id="input-password2"
               type="password"
               class="form-control"
               formControlName="password_confirmation"
